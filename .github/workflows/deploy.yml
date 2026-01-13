@@ -17,7 +17,7 @@ jobs:
         with:
           host: ${{ secrets.HOST }}
           username: ${{ secrets.USERNAME }}
-          password: ${{ secrets.PASSWORD }}
+          key: ${{ secrets.SSH_KEY }}
           script: |
             cd /var/www/learnwithamine/html
             git pull origin main
