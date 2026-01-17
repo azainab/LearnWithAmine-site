@@ -22,7 +22,7 @@
         font-size: 2.5em;
         text-align: center;
         box-shadow: 0 8px 32px rgba(0,0,0,0.3);
-        width: 90%;
+        width: calc(100% + 40px);
         max-width: 800px;
     ">🚀 Welcome to LearnWithAmine</h1>
     <p style="text-align: center; font-size: 20px; line-height: 1.6;">
