@@ -19,9 +19,9 @@
         📺 Watch on YouTube
     </a>
 
-    <footer>
-        <?php echo 'Server: ' . php_uname('n') . ' | Time: ' . date('Y-m-d H:i:s T'); ?>
-        | <a href="/github-webhook.php">Webhook Active</a>
+    <footer style="text-align: center; margin-top: 40px; color: #666; font-size: 14px;">
+        &copy; <?php echo date('Y'); ?> All Rights Reserved | LearnWithAmine.com
     </footer>
+
 </body>
 </html>
