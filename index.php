@@ -12,7 +12,19 @@
     </style>
 </head>
 <body>
-    <h1>🚀 Welcome to LearnWithAmine</h1>
+    <h1 style="
+        background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+        color: white;
+        padding: 20px 40px;
+        margin: 20px auto;
+        border-radius: 15px;
+        display: inline-block;
+        font-size: 2.5em;
+        text-align: center;
+        box-shadow: 0 8px 32px rgba(0,0,0,0.3);
+        width: 90%;
+        max-width: 800px;
+    ">🚀 Welcome to LearnWithAmine</h1>
     <p style="text-align: center; font-size: 20px; line-height: 1.6;">
         Immigration guidance for US/Canada<br>
         Visa applications (F1, OPT, Express Entry, PNP)<br>
