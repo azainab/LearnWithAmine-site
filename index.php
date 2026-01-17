@@ -13,7 +13,7 @@
 </head>
 <body>
     <h1>🚀 Welcome to LearnWithAmine</h1>
-    <p style="text-align: center;"> focuses on immigration guidance for US/Canada, visa applications (F1, OPT, Express Entry, PNP), form tutorials (imm5669e, DS-11, SINP), passport/OCI processes, and personal experiences (US F1 visa, CPT). </p>
+    <p style="text-align: center; font-size: 18px "> Immigration guidance for US/Canada, visa applications (F1, OPT, Express Entry, PNP), form tutorials (imm5669e, DS-11, SINP), passport/OCI processes, and personal experiences (US F1 visa, CPT). </p>
 
     <a href="https://www.youtube.com/@LearnwithAmine" class="youtube" target="_blank">
         📺 Watch on YouTube
