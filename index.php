@@ -55,19 +55,39 @@
         document.getElementById('chatbot').style.display = chatOpen ? 'none' : 'block';
         chatOpen = !chatOpen;
     }
+
     async function sendMessage(e) {
         if (e.key === 'Enter') {
             const input = document.getElementById('chat-input');
-            const msg = input.value;
+            const msg = input.value.trim();
             if (!msg) return;
+
             addMessage('You', msg);
             input.value = '';
-            // Replace with your API (OpenAI/Groq)
-            const response = await fetch('/api/chat', {method:'POST', body:JSON.stringify({message:msg})});
-            const data = await response.json();
-            addMessage('Bot', data.reply);
+
+            try {
+                const response = await fetch('/api/chat.php', {
+                    method: 'POST',
+                    headers: { 'Content-Type': 'application/json' },
+                    body: JSON.stringify({ message: msg })
+                });
+
+                const text = await response.text();
+                console.log('Raw API response:', text);  // Check browser F12>Console
+
+                if (!response.ok) {
+                    throw new Error(`HTTP ${response.status}: ${text}`);
+                }
+
+                const data = JSON.parse(text);
+                addMessage('Bot', data.reply);
+            } catch (error) {
+                console.error('Chat error:', error);
+                addMessage('Bot', 'Sorry, bot error. Try "F1 visa" or "Express Entry".');
+            }
         }
     }
+
     function addMessage(sender, text) {
         const div = document.createElement('div');
         div.innerHTML = `<strong>${sender}:</strong> ${text.replace(/\n/g,'<br>')}`;
