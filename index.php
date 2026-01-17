@@ -39,5 +39,42 @@
         &copy; <?php echo date('Y'); ?> All Rights Reserved | LearnWithAmine.com
     </footer>
 
+    <div id="chatbot" style="position:fixed;bottom:20px;right:20px;width:350px;height:500px;background:white;border-radius:15px;box-shadow:0 10px 40px rgba(0,0,0,0.3);display:none;z-index:1000;">
+        <div style="background:#667eea;color:white;padding:15px;border-radius:15px 15px 0 0;">
+            Immigration Bot 🚀
+            <button onclick="toggleChat()" style="float:right;background:none;border:none;color:white;font-size:20px;">×</button>
+        </div>
+        <div id="chat-messages" style="height:380px;overflow-y:auto;padding:15px;"></div>
+        <input id="chat-input" placeholder="Ask about visas..." style="width:calc(100%-30px);padding:12px;border:none;border-top:1px solid #eee;outline:none;" onkeypress="sendMessage(event)">
+    </div>
+    <button onclick="toggleChat()" style="position:fixed;bottom:20px;right:20px;background:#667eea;color:white;border:none;border-radius:50%;width:60px;height:60px;font-size:18px;box-shadow:0 6px 20px rgba(102,126,234,0.4);">💬</button>
+
+    <script>
+    let chatOpen = false;
+    function toggleChat() {
+        document.getElementById('chatbot').style.display = chatOpen ? 'none' : 'block';
+        chatOpen = !chatOpen;
+    }
+    async function sendMessage(e) {
+        if (e.key === 'Enter') {
+            const input = document.getElementById('chat-input');
+            const msg = input.value;
+            if (!msg) return;
+            addMessage('You', msg);
+            input.value = '';
+            // Replace with your API (OpenAI/Groq)
+            const response = await fetch('/api/chat', {method:'POST', body:JSON.stringify({message:msg})});
+            const data = await response.json();
+            addMessage('Bot', data.reply);
+        }
+    }
+    function addMessage(sender, text) {
+        const div = document.createElement('div');
+        div.innerHTML = `<strong>${sender}:</strong> ${text.replace(/\n/g,'<br>')}`;
+        document.getElementById('chat-messages').appendChild(div);
+        div.scrollIntoView();
+    }
+    </script>
+
 </body>
 </html>
