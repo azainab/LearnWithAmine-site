@@ -16,7 +16,7 @@
     <h1>🚀 Welcome to LearnWithAmine</h1>
     <p style="text-align: center;">Master AI, ML & Data Science with hands-on courses.</p>
 
-    <a href="https://youtube.com/@learnwithamine" class="youtube" target="_blank">
+    <a href="https://www.youtube.com/@LearnwithAmine" class="youtube" target="_blank">
         📺 Watch on YouTube
     </a>
 
