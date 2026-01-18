@@ -23,3 +23,4 @@ async def chat(request: Request):
     replies = { 'cpt': 'CPT details...', 'f1': 'F1 visa...' }  # Your dict
     reply = replies.get(message, 'Default reply')
     return {'response': reply}  # Matches JS
+
