@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Learn With Amine</title>
+    <title>LearnWithAmine</title>
     <style>
         body { font-family: Arial, sans-serif; max-width: 800px; margin: 0 auto; padding: 20px; background: #f4f4f4; }
         h1 { color: #333; text-align: center; }
@@ -37,7 +37,7 @@
         transform: translateX(-50%);
         width: calc(100% + 40px);        /* Edge-to-edge */
 >>>>>>> 115c4b8096f28ac9241631e5f361ee2fe63c5204
-    ">🚀 Welcome to LearnWithAmine</h1>
+    ">🚀 Welcome to Learn With Amine</h1>
     <p style="text-align: center; font-size: 20px; line-height: 1.6;">
         Immigration guidance for US/Canada<br>
         Visa applications (F1, OPT, Express Entry, PNP)<br>
