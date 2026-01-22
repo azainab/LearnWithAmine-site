@@ -44,7 +44,7 @@
         Form tutorials (imm5669e, DS-11, SINP)<br>
         Passport/OCI processes, and personal experiences (US F1 visa, CPT)
     </p>
-    <a href="https://www.youtube.com/@LearnwithAmine" class="youtube" target="_blank">
+    <a href="https://youtu.be/RynonMlwPDs" class="youtube" target="_blank">
         📺 Watch on YouTube
     </a>
 
